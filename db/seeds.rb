@@ -13,3 +13,13 @@ anime.each do |row|
         rating: row["Rating"],
     )
 end
+
+csv_file = Rails.root.join('db/users.csv')
+csv_data = File.read(csv_file)
+name = CSV.parse(csv_data, headers: true)
+
+name.each do |row|
+    User.create(
+        name: row["Firstname"],
+    )
+end
