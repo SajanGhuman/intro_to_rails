@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eng_name: MyString
+  jap_name: MyString
+  type: 
+  episode: 1
+  status: MyString
+  rating: MyString
+
+two:
+  eng_name: MyString
+  jap_name: MyString
+  type: 
+  episode: 1
+  status: MyString
+  rating: MyString
