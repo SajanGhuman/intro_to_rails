@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body class="bg-custom_blue">
+    <div class="flex flex-col text-white w-[100vw] h-[100vh] justify-center items-center relative top-[-300px]">
+    <h1 class="">Anime Table</h1>
+    <table class="">      
+    <thead>
+    <tr class="border-[1px] border-white">
+    <th>Anime ID</th>
+    <th>English Name</th>
+    <th>Japanese Name</th>
+    <th>Number of episodes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @tables.each do |anime| %>
+        <tr class="border-[1px] border-white text-center">
+        <td class="px-[50px]"><%= anime.id %></td>
+        <% if anime.eng_name.blank? %>
+        <td class="px-[50px]">NA</td>
+        <% else %>
+        <td class="px-[50px]"><%= anime.eng_name %></td>
+        <% end %>
+        <td class="px-[50px]"><%= anime.jap_name %></td>
+        <td class="px-[50px]"><%= anime.episode %></td>
+        </tr>
+        <% end %>
+    </tbody>
+    </table>
+    </div>
+    <div class="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[50%] text-white">
+    <%= paginate @tables %> 
+    </div>
+</body>
+</html>
