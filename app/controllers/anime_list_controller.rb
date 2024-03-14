@@ -1,10 +1,8 @@
 class AnimeListController < ApplicationController
     def index
-        
-      end 
+    end 
 
     def about 
-    
     end
 
     def show 
@@ -15,3 +13,4 @@ class AnimeListController < ApplicationController
       @tables = AnimeList.page(params[:page]).per(10)
     end
 end
+
