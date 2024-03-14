@@ -1,0 +1,2 @@
+module AnimeCommentHelper
+end

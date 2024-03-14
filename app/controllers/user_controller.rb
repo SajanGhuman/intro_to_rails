@@ -5,6 +5,6 @@ class UserController < ApplicationController
 
       def show 
         @user = User.find(params[:id])
-        @comment = @user.comments  
+        @comment = @user.comments[0]  
       end
 end

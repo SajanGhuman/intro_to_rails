@@ -29,3 +29,13 @@ name.each do |row|
     )
 
 end
+
+anime_lists = AnimeList.all
+users = User.all
+
+anime_lists.each do |anime_list|
+    
+    random_user = users.sample
+    
+    AnimeComment.create(anime_list: anime_list, user: random_user)
+end

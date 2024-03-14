@@ -1,6 +1,7 @@
 class AnimeList < ApplicationRecord
-    has_many :user_anime_lists
-    has_many :users, through: :user_anime_lists
-    validates :jap_name, presence: true
+  has_many :anime_comments, dependent: :destroy
+  has_many :user, through: :anime_comments
+  validates :jap_name, presence: true
+  validates_associated :user
   end
   
