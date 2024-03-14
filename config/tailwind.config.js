@@ -14,7 +14,8 @@ module.exports = {
       },
       colors: {
         transparent: 'transparent',
-        "custom_blue": "#0F172A"
+        "custom_blue": "#0F172A",
+        "custom_light_blue": "#17314E",
       },
     },
   },
