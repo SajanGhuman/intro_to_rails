@@ -8,7 +8,7 @@ class AnimeListController < ApplicationController
     end
 
     def show 
-    
+      @anime = AnimeList.find(params[:id])
     end
 
     def table

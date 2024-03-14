@@ -3,39 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>index</title>
 </head>
-<body class="bg-custom_blue flex flex-col justify-center items-center">
+<body class="bg-custom_blue">
 <nav class="absolute top-[20px] left-[50px] flex justify-center items-center my-4 z-10">
 <ul class="flex space-x-4">
     <li class="text-[25px] font-bold"><a href="/" class="text-white hover:text-gray-300">Home</a></li>
     <li class="text-[25px] font-bold"><a href="/about" class="text-white hover:text-gray-300">About</a></li>
     <li class="text-[25px] font-bold"><a href="/animes" class="text-white hover:text-gray-300">Anime</a></li>
     <li class="text-[25px] font-bold"><a href="/users" class="text-white hover:text-gray-300">Users</a></li>
+    <li class="text-[25px] font-bold"><a href="/comments" class="text-white hover:text-gray-300">Commnets</a></li>
 </ul>
 </nav>
-<div class="max-w-4xl mx-auto">
-<h1 class="text-3xl font-bold mb-4 text-white">Data Collection Navigation</h1>
-
-<table class="min-w-full bg-white shadow-md rounded">
-    <thead class="bg-gray-800 text-white">
-        <tr>
-            <th class="text-left py-3 px-4 uppercase font-semibold">Category</th>
-            <th class="text-left py-3 px-4 uppercase font-semibold">Description</th>
-        </tr>
+    <div class="flex flex-col text-white w-[100vw] h-[100vh] justify-center items-center relative top-[-300px]">
+    <h1 class="">Anime Table</h1>
+    <table class="">      
+    <thead>
+    <tr class="border-[1px] border-white">
+    <th>Anime ID</th>
+    <th>English Name</th>
+    <th>Japanese Name</th>
+    <th>Number of episodes</th>
+    </tr>
     </thead>
-    <tbody class="text-gray-700">
-        <tr>
-            <td class="border-t border-gray-200 px-4 py-2">Anime</td>
-            <td class="border-t border-gray-200 px-4 py-2">List of anime titles and details</td>
+    <tbody>
+        <tr class="border-[1px] border-white text-center">
+        <td class="px-[50px]"><%= @anime.id %></td>
+        <% if @anime.eng_name.blank? %>
+        <td class="px-[50px]">NA</td>
+        <% else %>
+        <td class="px-[50px]"><%= @anime.eng_name %></td>
+        <% end %>
+        <td class="px-[50px]"><%= @anime.jap_name %></td>
+        <td class="px-[50px]"><%= @anime.episode %></td>
         </tr>
-        <tr>
-            <td class="border-t border-gray-200 px-4 py-2">Users</td>
-            <td class="border-t border-gray-200 px-4 py-2">List of user profiles</td>
-        </tr>
-        <!-- Add more rows as needed for different categories -->
     </tbody>
-</table>
-</div>
+    </table>
+    </div>
+    <div class="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[50%] text-white"> 
+    </div>
 </body>
 </html>
