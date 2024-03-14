@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-</head>
-<body class="bg-custom_blue">
+<div class="absolute top-0 left-0 bg-custom_blue flex flex-col justify-center items-center w-[2000px] h-[100vh]">
 <nav class="absolute top-[20px] left-[50px] flex justify-center items-center my-4 z-10">
 <ul class="flex space-x-4">
     <li class="text-[25px] font-bold"><a href="/" class="text-white hover:text-gray-300">Home</a></li>
@@ -17,7 +10,7 @@
 </nav>
     <div class="flex flex-col text-white w-[100vw] h-[100vh] justify-center items-center relative top-[-200px]">
     <h1 class="">Users Table</h1>
-    <table class="">      
+    <table class="relative top-[150px]">      
     <thead>
     <tr class="border-[1px] border-white">
     <th>ID</th>
@@ -30,7 +23,7 @@
     <% @users.each do |user| %>
         <tr class="border-[1px] border-white text-center">
         <td class="px-[50px]"><%= link_to "/user/#{user.id}" do %><%= user.id %><% end %></td>
-        <td class="px-[50px]"><%= link_to "/user/#{user.id}" do %><img class="w-[50px] h-[50px]" src=<%= user.pimage %>/><% end %></td>
+        <td class="px-[50px]"><%= link_to "/user/#{user.id}" do %><%= image_tag user.pimage, alt: "User image", class: "w-[50px] h-[50px]" %><% end %></td>
         <td class="px-[50px]"><%= link_to "/user/#{user.id}" do %><%= user.name %><% end %></td>
         <td class="px-[50px]"><%= link_to "/user/#{user.id}" do %><%= user.last_name %><% end %></td>
         </tr>
@@ -41,5 +34,4 @@
     <div class="absolute left-[50%] top-[80%] translate-x-[-50%] translate-y-[50%] text-white">
     <%= paginate @users %> 
     </div>
-</body>
-</html>
+</div>
