@@ -30,7 +30,7 @@
                     <tr class="border-[1px] border-white">
                         <td class="px-[30px]"><%= comment.id %></td>
                         <td class="px-[30px]"><%= comment.content %></td>
-                        <td class="px-[30px]"><%= comment.user_id %></td>
+                        <td class="px-[30px]"><%= link_to "/user/#{comment.id}" do %><%= comment.user_id %><% end %></td>
                     </tr>
                 <% end %>
             </tbody>

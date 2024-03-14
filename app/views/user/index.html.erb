@@ -29,10 +29,10 @@
     <tbody>
     <% @users.each do |user| %>
         <tr class="border-[1px] border-white text-center">
-        <td class="px-[50px]"><%= user.id %></td>
-        <td class="px-[50px]"><img class="w-[50px] h-[50px]" src=<%= user.pimage %>/></td>
-        <td class="px-[50px]"><%= user.name %></td>
-        <td class="px-[50px]"><%= user.last_name %></td>
+        <td class="px-[50px]"><%= link_to "/user/#{user.id}" do %><%= user.id %><% end %></td>
+        <td class="px-[50px]"><%= link_to "/user/#{user.id}" do %><img class="w-[50px] h-[50px]" src=<%= user.pimage %>/><% end %></td>
+        <td class="px-[50px]"><%= link_to "/user/#{user.id}" do %><%= user.name %><% end %></td>
+        <td class="px-[50px]"><%= link_to "/user/#{user.id}" do %><%= user.last_name %><% end %></td>
         </tr>
         <% end %>
     </tbody>

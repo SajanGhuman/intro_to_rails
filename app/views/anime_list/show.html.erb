@@ -24,6 +24,7 @@
     <th>English Name</th>
     <th>Japanese Name</th>
     <th>Number of episodes</th>
+    <th>Users who wacthed</th>
     </tr>
     </thead>
     <tbody>
@@ -36,6 +37,7 @@
         <% end %>
         <td class="px-[50px]"><%= @anime.jap_name %></td>
         <td class="px-[50px]"><%= @anime.episode %></td>
+        <td class="px-[50px]"><%= link_to "/user/#{@user.id}" do %><%= Faker::Number.between(from: 1, to: 100) %><% end %></td>
         </tr>
     </tbody>
     </table>

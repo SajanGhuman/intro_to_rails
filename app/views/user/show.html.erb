@@ -16,30 +16,18 @@
 </ul>
 </nav>
     <div class="flex flex-col text-white w-[100vw] h-[100vh] justify-center items-center relative top-[-300px]">
-    <h1 class="">Anime Table</h1>
-    <table class="">      
-    <thead>
-    <tr class="border-[1px] border-white">
-    <th>Anime ID</th>
-    <th>English Name</th>
-    </tr>
-    </thead>
-    <tbody>
-     <% @tables.each do |anime| %>
-        <tr class="border-[1px] border-white text-center">
-            <td class="px-[50px]"><%= link_to "/anime/#{anime.id}" do %><%= anime.id %><% end %></td>
-            <% if anime.eng_name.blank? %>
-            <td class="px-[50px]">NA</td>
-            <% else %>
-            <% end %>
-            <td class="px-[50px]"><%= link_to "/anime/#{anime.id}" do %><%= anime.eng_name %><% end %></td>
-        </tr>
-    <% end %>
-    </tbody>
-    </table>
+    <div class="flex flex-col justify-center items-center h-[500px]">
+    <img class="w-[250px] h-[250px]" src=<%= @user.pimage%></img>
+    <p class="font-bold text-[20px]"><%= @user.id %></p>
+    <p class="font-bold text-[50px]"><%= @user.name %></p><br>
+    <p class="font-bold text-[20px]"><%= Faker::Lorem.paragraph %></p>
+    <p class="font-bold text-[20px]"><%= Faker::Lorem.paragraph %></p>
+    <p class="font-bold text-[20px]"><%= Faker::Lorem.paragraph %></p>
+    <p class="font-bold text-[20px]"><%= Faker::Lorem.paragraph %></p>
+    <p class="font-bold text-[20px]"><%= Faker::Lorem.paragraph %></p>
+    <p class="font-bold text-[20px] relative top-[50px] color-blue"><%= link_to "/comment/#{@comment.first.id}" do %>Click to View Comments by <%= @user.name %><% end %></p>
     </div>
-    <div class="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[50%] text-white">
-    <%= paginate @tables %> 
     </div>
 </body>
 </html>
+

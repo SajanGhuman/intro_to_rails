@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body class="bg-custom_blue">
+<nav class="absolute top-[20px] left-[50px] flex justify-center items-center my-4 z-10">
+<ul class="flex space-x-4">
+    <li class="text-[25px] font-bold"><a href="/" class="text-white hover:text-gray-300">Home</a></li>
+    <li class="text-[25px] font-bold"><a href="/about" class="text-white hover:text-gray-300">About</a></li>
+    <li class="text-[25px] font-bold"><a href="/animes" class="text-white hover:text-gray-300">Anime</a></li>
+    <li class="text-[25px] font-bold"><a href="/users" class="text-white hover:text-gray-300">Users</a></li>
+    <li class="text-[25px] font-bold"><a href="/comments" class="text-white hover:text-gray-300">Comments</a></li>
+</ul>
+</nav>
+    <div class="flex flex-col text-white w-[100vw] h-[100vh] justify-center items-center relative top-[-300px]">
+    <div class="flex flex-col justify-center items-center h-[500px]">
+    <img class="w-[250px] h-[250px]" src=<%= @user.pimage%></img>
+    <p class="font-bold text-[20px]"><%= @user.id %></p>
+    <p class="font-bold text-[50px]"><%= @user.name %></p><br>
+    <p class="font-bold text-[20px] relative top-[50px] color-blue">Comments made by <%= @user.name %>:</p>
+    <p class="font-bold text-[20px] relative top-[80px] color-blue"><%= @comment.content %></p>
+    </div>
+    </div>
+</body>
+</html>
