@@ -1,7 +1,15 @@
 class AnimeListController < ApplicationController
     def index
-        @animes = AnimeList.all
+        
       end 
+
+    def about 
+    
+    end
+
+    def show 
+    
+    end
 
     def table
       @tables = AnimeList.page(params[:page]).per(10)

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body class="bg-custom_blue flex flex-col justify-center items-center">
+<nav class="absolute top-[20px] left-[50px] flex justify-center items-center my-4 z-10">
+<ul class="flex space-x-4">
+    <li class="text-[25px] font-bold"><a href="/" class="text-white hover:text-gray-300">Home</a></li>
+    <li class="text-[25px] font-bold"><a href="/about" class="text-white hover:text-gray-300">About</a></li>
+    <li class="text-[25px] font-bold"><a href="/animes" class="text-white hover:text-gray-300">Anime</a></li>
+    <li class="text-[25px] font-bold"><a href="/users" class="text-white hover:text-gray-300">Users</a></li>
+</ul>
+</nav>
+<div class="w-[400px] flex flex-col justify-center items-center relative left-[700px]">
+<h1 class="text-3xl font-bold relative left-[-150px] text-white">About</h1>
+        <div class=" p-6 rounded-lg shadow bg-custom_blue text-white w-[1000px] h-[1000px]">
+            <h2 class="text-xl font-semibold mb-2">Data Sources</h2>
+            <p class="mb-4">
+                Here are the details about the data sources used:
+                <ul class="list-disc ml-8">
+                    <li><b>Anime CSV:</b> This file contains a list of animes. The data source is this: <b><a class="color-blue" target="_blank" href="https://raw.githubusercontent.com/Hernan4444/MyAnimeList-Database/master/data/anime.csv">Link</a></b></li><br/>
+                    <li><b>Users CSV:</b> This file contains a list of first names. The data source is this: <b><a class="color-blue" target="_blank" href="https://github.com/MartynKeigher/ADUser_Generator/blob/main/FirstNames.csv">Link</a></b></li><br/>
+                    <li><b>Faker Gem:</b> Faker gem is used to geneate fake comments. The data source is this : <b><a class="color-blue" target="_blank" href="https://github.com/faker-ruby/faker">Link</a></b></li><br/>
+
+                </ul>
+            </p>
+            <h2 class="text-xl font-semibold mb-2">Entity-Relationship Diagram (ERD)</h2>
+            <p>
+                <%= image_tag 'erd.png', alt: 'Entity-Relationship Diagram', class: 'max-w-full' %>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
