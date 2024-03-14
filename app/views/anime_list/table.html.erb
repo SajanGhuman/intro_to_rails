@@ -14,6 +14,8 @@
     <input type="text" name="query" placeholder="Search..." class="bg-custom_light_blue rounded-full">
     <button type="submit">Search</button>
     </form>
+
+    <% if @tables.present? %>
     <table class="relative top-[-50px]">      
     <thead>
     <tr class="border-[1px] border-white">
@@ -34,6 +36,9 @@
     <% end %>
     </tbody>
     </table>
+    <% else %>
+        <p class="px-[50px] absolute top-[50%] left-[48.5%] translate-x-[-50%] translate-y-[-50%]">No Results Found</p>
+    <% end %>
     </div>
     <div class="absolute top-[75%] text-white">
     <%= paginate @tables %> 
