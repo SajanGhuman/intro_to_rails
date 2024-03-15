@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_14_200555) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_15_024343) do
   create_table "anime_comments", force: :cascade do |t|
     t.integer "anime_list_id", null: false
     t.integer "user_id", null: false
@@ -31,12 +31,30 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_14_200555) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.string "kanji_name"
+    t.string "image"
+    t.string "know_more"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", force: :cascade do |t|
     t.text "content"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string "readMore"
+    t.string "title"
+    t.string "author"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
