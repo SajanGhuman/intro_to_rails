@@ -11,9 +11,17 @@
     <div class="flex flex-col text-white w-[100vw] h-[100vh] justify-center items-center relative top-[-200px]">
 
     <form action="/users" method="get" class="relative top-[100px] rounded-full flex gap-[10px] p-[10px]">
-    <input type="text" name="query" placeholder="Search..." class="bg-custom_light_blue rounded-full">
-    <button type="submit">Search</button>
-    </form>
+  <input type="text" name="query" placeholder="Search..." class="bg-custom_light_blue rounded-full">
+  
+  <!-- Dropdown menu for hierarchical search -->
+  <select name="category" class="bg-custom_light_blue rounded-full">
+    <option value="name">Name</option>
+    <option value="comments">Comments</option>
+  </select>
+
+  <button type="submit">Search</button>
+</form>
+
 
 
     <% if @users.present? %>

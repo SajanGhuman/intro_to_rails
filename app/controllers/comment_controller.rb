@@ -8,3 +8,5 @@ class CommentController < ApplicationController
         @user = @comment.user
       end
   end
+
+  
